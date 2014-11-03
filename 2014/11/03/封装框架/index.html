@@ -3,21 +3,33 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | 韩渊媛</title>
+  <title>面向对象（一） | 韩渊媛</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="instanceof关键字判断构造函数的原型是不是在对象的原型链上
+1对象 instanceof 构造函数
+创建函数的三种方式函数声明123function 函数名（参数列表）&amp;#123;	//函数体&amp;#125;
+函数表达式123var 函数名 = function (参数列表)&amp;#123;	//函数体&amp;#125;
+Function1var 函数名 = new Funtion();
+Functio">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2017/02/06/hello-world/index.html">
+<meta property="og:title" content="面向对象（一）">
+<meta property="og:url" content="http://yoursite.com/2014/11/03/封装框架/index.html">
 <meta property="og:site_name" content="韩渊媛">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2017-02-06T06:55:00.299Z">
+<meta property="og:description" content="instanceof关键字判断构造函数的原型是不是在对象的原型链上
+1对象 instanceof 构造函数
+创建函数的三种方式函数声明123function 函数名（参数列表）&amp;#123;	//函数体&amp;#125;
+函数表达式123var 函数名 = function (参数列表)&amp;#123;	//函数体&amp;#125;
+Function1var 函数名 = new Funtion();
+Functio">
+<meta property="og:updated_time" content="2014-11-03T14:21:38.392Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="面向对象（一）">
+<meta name="twitter:description" content="instanceof关键字判断构造函数的原型是不是在对象的原型链上
+1对象 instanceof 构造函数
+创建函数的三种方式函数声明123function 函数名（参数列表）&amp;#123;	//函数体&amp;#125;
+函数表达式123var 函数名 = function (参数列表)&amp;#123;	//函数体&amp;#125;
+Function1var 函数名 = new Funtion();
+Functio">
   
     <link rel="alternative" href="/atom.xml" title="韩渊媛" type="application/atom+xml">
   
@@ -231,11 +243,11 @@ Quick">
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-封装框架" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/02/06/hello-world/" class="article-date">
-      <time datetime="2017-02-06T06:55:00.299Z" itemprop="datePublished">2017-02-06</time>
+      <a href="/2014/11/03/封装框架/" class="article-date">
+      <time datetime="2014-11-03T11:33:27.000Z" itemprop="datePublished">2014-11-03</time>
 </a>
     </div>
   
@@ -248,7 +260,7 @@ Quick">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      面向对象（一）
     </h1>
   
 
@@ -265,15 +277,45 @@ Quick">
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h2 id="instanceof关键字"><a href="#instanceof关键字" class="headerlink" title="instanceof关键字"></a>instanceof关键字</h2><pre><code>判断构造函数的原型是不是在对象的原型链上
+</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">对象 <span class="keyword">instanceof</span> 构造函数</div></pre></td></tr></table></figure>
+<h2 id="创建函数的三种方式"><a href="#创建函数的三种方式" class="headerlink" title="创建函数的三种方式"></a>创建函数的三种方式</h2><h3 id="函数声明"><a href="#函数声明" class="headerlink" title="函数声明"></a>函数声明</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> 函数名（参数列表）</span>&#123;</div><div class="line">	<span class="comment">//函数体</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="函数表达式"><a href="#函数表达式" class="headerlink" title="函数表达式"></a>函数表达式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> 函数名 = <span class="function"><span class="keyword">function</span> (<span class="params">参数列表</span>)</span>&#123;</div><div class="line">	<span class="comment">//函数体</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> 函数名 = <span class="keyword">new</span> Funtion();</div></pre></td></tr></table></figure>
+<h2 id="Function的使用"><a href="#Function的使用" class="headerlink" title="Function的使用"></a>Function的使用</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> func = <span class="keyword">new</span> <span class="built_in">Function</span>();</div><div class="line">	<span class="comment">//创建空函数</span></div><div class="line"><span class="keyword">var</span> func1 = <span class="keyword">new</span> <span class="built_in">Function</span>(methodBody);</div><div class="line">	<span class="comment">//创建有函数体的函数，methodBody是一个字符串</span></div><div class="line"><span class="keyword">var</span> func2 = <span class="keyword">new</span> <span class="built_in">Function</span>(arg1,arg2,...argN,methodBody)</div><div class="line"><span class="comment">//创建一个以methodBody为函数体，之前所有的参数为形参名的函数，所有的参数都是字符串。</span></div></pre></td></tr></table></figure>
+<h3 id="如何解决Function的函数体过长的问题？"><a href="#如何解决Function的函数体过长的问题？" class="headerlink" title="如何解决Function的函数体过长的问题？"></a>如何解决Function的函数体过长的问题？</h3><ul>
+<li>字符串拼接</li>
+<li>使用模板引擎</li>
+<li>使用反引号</li>
+</ul>
+<h2 id="eval的使用"><a href="#eval的使用" class="headerlink" title="eval的使用"></a>eval的使用</h2><p>eval是个函数，可以将字符串转换成代码并立即执行</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">eval</span>(符合js语法规范的字符串)</div></pre></td></tr></table></figure>
+<h3 id="使用eval处理json格式数据的时候的问题"><a href="#使用eval处理json格式数据的时候的问题" class="headerlink" title="使用eval处理json格式数据的时候的问题"></a>使用eval处理json格式数据的时候的问题</h3><p>当使用eval处理json格式数据的时候，eval会将JSON格式字符串中的大括号{}当做代码段来解析，所以会报错<br>解决方案：<br>1.将变量声明也同时放在eval中<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> jsonStr = <span class="string">"&#123;key: value&#125;"</span>;</div><div class="line"></div><div class="line"><span class="built_in">eval</span>(<span class="string">"var obj="</span> + jsonStr);</div></pre></td></tr></table></figure></p>
+<p>2.在json格式的字符串前后拼接小括号<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> jsonStr = <span class="string">"&#123;key: value&#125;"</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> obj = <span class="built_in">eval</span>(<span class="string">"("</span> + jsonStr + <span class="string">")"</span>);</div></pre></td></tr></table></figure></p>
+<h2 id="Function和eval的异同"><a href="#Function和eval的异同" class="headerlink" title="Function和eval的异同"></a>Function和eval的异同</h2><ul>
+<li>都能讲字符串转换成代码</li>
+<li>Function创建出来的是函数，需要手动去调用，代码才会执行，而eval会直接将字符串转成代码执行</li>
+</ul>
+<p>问题：</p>
+<ul>
+<li>执行效率的问题</li>
+<li>安全性问题(XSS)</li>
+</ul>
+<h2 id="函数的原型链"><a href="#函数的原型链" class="headerlink" title="函数的原型链"></a>函数的原型链</h2><p>如果将函数当做一个对象对待的话，那么他也是有构造函数创建出来的，所以这个函数对象，也会有相应的原型链</p>
+<p>js中的所有的函数的构造函数都是Function，包括Function本身</p>
+<h2 id="完整的原型链绘制"><a href="#完整的原型链绘制" class="headerlink" title="完整的原型链绘制"></a>完整的原型链绘制</h2><h2 id="Object和Function的关系"><a href="#Object和Function的关系" class="headerlink" title="Object和Function的关系"></a>Object和Function的关系</h2><p>可以通过instanceof关键字来确定倆者的关系，Object和Function互为实例</p>
+<h2 id="arguments对象"><a href="#arguments对象" class="headerlink" title="arguments对象"></a>arguments对象</h2><p>arguments是函数内部的一个对象，他是一个伪数组<br>在函数内部调用的时候，会将函数的实参，依次的存入这个伪数组中</p>
+<p>arguments.length属性，表示函数在调用的时候，传入的实参的个数<br>arguments.callee属性，指的是arguments对象所在的函数，一般用来在匿名函数中做递归</p>
+<h2 id="函数对象的成员"><a href="#函数对象的成员" class="headerlink" title="函数对象的成员"></a>函数对象的成员</h2><ul>
+<li>arguments</li>
+<li>caller 函数的调用环境，如果是在全局，则为null，如果是在其他函数当中调用的，那么caller为所在的那个函数</li>
+<li>length 函数的形参的个数</li>
+<li>name 函数的名称<br>  函数声明和函数表达式的函数名为正常的函数名，new Function创建出来的函数名为anonymous</li>
+</ul>
+<h2 id="静态成员以及实例成员"><a href="#静态成员以及实例成员" class="headerlink" title="静态成员以及实例成员"></a>静态成员以及实例成员</h2><ul>
+<li>静态成员：通过构造函数访问的成员就是静态成员</li>
+<li>实例成员：通过实例去访问的成员就是实例成员</li>
+</ul>
 
       
     </div>
@@ -282,13 +324,13 @@ Quick">
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/02/06/hello-world/">Hello World</a></p>
+        <p><span>本文标题:</span><a href="/2014/11/03/封装框架/">面向对象（一）</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 韩渊媛 的个人博客">韩渊媛</a></p>
-        <p><span>发布时间:</span>2017年02月06日 - 14时55分</p>
-        <p><span>最后更新:</span>2017年02月06日 - 14时55分</p>
+        <p><span>发布时间:</span>2014年11月03日 - 19时33分</p>
+        <p><span>最后更新:</span>2014年11月03日 - 22时21分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/02/06/hello-world/" title="Hello World">http://yoursite.com/2017/02/06/hello-world/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/02/06/hello-world/　　作者: 韩渊媛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2014/11/03/封装框架/" title="面向对象（一）">http://yoursite.com/2014/11/03/封装框架/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2014/11/03/封装框架/　　作者: 韩渊媛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -301,20 +343,15 @@ Quick">
 
 <nav id="article-nav">
   
-    <a href="/2017/02/06/myblog-firstday/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/02/06/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          版本控制管理
+          Hello World
         
       </div>
     </a>
   
-  
-    <a href="/2014/11/03/封装框架/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">面向对象（一）</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
   
 </nav>
 
@@ -323,7 +360,7 @@ Quick">
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#instanceof关键字"><span class="toc-number">1.</span> <span class="toc-text">instanceof关键字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建函数的三种方式"><span class="toc-number">2.</span> <span class="toc-text">创建函数的三种方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#函数声明"><span class="toc-number">2.1.</span> <span class="toc-text">函数声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数表达式"><span class="toc-number">2.2.</span> <span class="toc-text">函数表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Function"><span class="toc-number">2.3.</span> <span class="toc-text">Function</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Function的使用"><span class="toc-number">3.</span> <span class="toc-text">Function的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何解决Function的函数体过长的问题？"><span class="toc-number">3.1.</span> <span class="toc-text">如何解决Function的函数体过长的问题？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#eval的使用"><span class="toc-number">4.</span> <span class="toc-text">eval的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用eval处理json格式数据的时候的问题"><span class="toc-number">4.1.</span> <span class="toc-text">使用eval处理json格式数据的时候的问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Function和eval的异同"><span class="toc-number">5.</span> <span class="toc-text">Function和eval的异同</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数的原型链"><span class="toc-number">6.</span> <span class="toc-text">函数的原型链</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#完整的原型链绘制"><span class="toc-number">7.</span> <span class="toc-text">完整的原型链绘制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Object和Function的关系"><span class="toc-number">8.</span> <span class="toc-text">Object和Function的关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#arguments对象"><span class="toc-number">9.</span> <span class="toc-text">arguments对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数对象的成员"><span class="toc-number">10.</span> <span class="toc-text">函数对象的成员</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#静态成员以及实例成员"><span class="toc-number">11.</span> <span class="toc-text">静态成员以及实例成员</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -371,7 +408,7 @@ Quick">
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2017/02/06/hello-world/" data-title="Hello World" data-url="http://yoursite.com/2017/02/06/hello-world/"></div>
+    <div class="ds-thread" data-thread-key="2014/11/03/封装框架/" data-title="面向对象（一）" data-url="http://yoursite.com/2014/11/03/封装框架/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -394,15 +431,13 @@ Quick">
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/02/06/myblog-firstday/" title="上一篇: 版本控制管理">
+            <a href="/2017/02/06/hello-world/" title="上一篇: Hello World">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2014/11/03/封装框架/" title="下一篇: 面向对象（一）">
-                <i class="fa fa-angle-right"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
     </div>
     <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/02/06/node知识整理/">面向对象</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/06/myblog-firstday/">版本控制管理</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/06/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/11/03/封装框架/">面向对象（一）</a></li></ul>
