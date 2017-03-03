@@ -37,40 +37,70 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="框架和库
-库就是有你亲自去调用对应的API，大部分功能逻辑由你自己去完成；
-框架就是一个大的平台，在平台里提供大量已经实现的的功能
+<meta name="description" content="JS的组成
+ECMAScript  规定JS语法规范和标准
+DOM   文档对象模型，提供了一套操作dom元素的api
+BOM   浏览器对象模型，提供了一套操作浏览器相关内容的api
 
-SPAsimple page application单页面应用程序
-利用锚点改变网页内容
-window对象的hashchange事件
-window.location拿到锚点的内容
-根据不同的hash显示不同的内容说明，制作页面锚点除了使用 锚点标签 name 属性之">
+JS中的数据类型简单数据类型
+string
+number
+boolean
+undefined
+null复杂数据类型
+Object
+function
+Math
+Array
+Date
+RegExp
+String
+Nu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="angular(一)">
-<meta property="og:url" content="http://yoursite.com/2017/02/15/http协议/index.html">
+<meta property="og:title" content="面向对象">
+<meta property="og:url" content="http://yoursite.com/2016/06/06/node知识整理/index.html">
 <meta property="og:site_name" content="韩渊媛">
-<meta property="og:description" content="框架和库
-库就是有你亲自去调用对应的API，大部分功能逻辑由你自己去完成；
-框架就是一个大的平台，在平台里提供大量已经实现的的功能
+<meta property="og:description" content="JS的组成
+ECMAScript  规定JS语法规范和标准
+DOM   文档对象模型，提供了一套操作dom元素的api
+BOM   浏览器对象模型，提供了一套操作浏览器相关内容的api
 
-SPAsimple page application单页面应用程序
-利用锚点改变网页内容
-window对象的hashchange事件
-window.location拿到锚点的内容
-根据不同的hash显示不同的内容说明，制作页面锚点除了使用 锚点标签 name 属性之">
-<meta property="og:updated_time" content="2017-02-17T12:47:52.920Z">
+JS中的数据类型简单数据类型
+string
+number
+boolean
+undefined
+null复杂数据类型
+Object
+function
+Math
+Array
+Date
+RegExp
+String
+Nu">
+<meta property="og:updated_time" content="2017-03-03T11:22:03.932Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="angular(一)">
-<meta name="twitter:description" content="框架和库
-库就是有你亲自去调用对应的API，大部分功能逻辑由你自己去完成；
-框架就是一个大的平台，在平台里提供大量已经实现的的功能
+<meta name="twitter:title" content="面向对象">
+<meta name="twitter:description" content="JS的组成
+ECMAScript  规定JS语法规范和标准
+DOM   文档对象模型，提供了一套操作dom元素的api
+BOM   浏览器对象模型，提供了一套操作浏览器相关内容的api
 
-SPAsimple page application单页面应用程序
-利用锚点改变网页内容
-window对象的hashchange事件
-window.location拿到锚点的内容
-根据不同的hash显示不同的内容说明，制作页面锚点除了使用 锚点标签 name 属性之">
+JS中的数据类型简单数据类型
+string
+number
+boolean
+undefined
+null复杂数据类型
+Object
+function
+Math
+Array
+Date
+RegExp
+String
+Nu">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -80,7 +110,7 @@ window.location拿到锚点的内容
   };
 </script>
 
-  <title> angular(一) | 韩渊媛 </title>
+  <title> 面向对象 | 韩渊媛 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -131,7 +161,7 @@ window.location拿到锚点的内容
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             <i class="menu-item-icon icon-next-home"></i> <br />
-            Home
+            Startseite
           </a>
         </li>
       
@@ -139,7 +169,7 @@ window.location拿到锚点的内容
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             <i class="menu-item-icon icon-next-categories"></i> <br />
-            Categories
+            Kategorien
           </a>
         </li>
       
@@ -147,7 +177,7 @@ window.location拿到锚点的内容
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             <i class="menu-item-icon icon-next-archives"></i> <br />
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -163,7 +193,7 @@ window.location拿到锚点的内容
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             <i class="menu-item-icon icon-next-about"></i> <br />
-            About
+            Über
           </a>
         </li>
       
@@ -197,7 +227,7 @@ window.location拿到锚点的内容
           
           
             
-              angular(一)
+              面向对象
             
           
         </h1>
@@ -205,9 +235,9 @@ window.location拿到锚点的内容
 
       <div class="post-meta">
         <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2017-02-15T15:49:07+08:00" content="2017-02-15">
-            2017-02-15
+          Veröffentlicht am
+          <time itemprop="dateCreated" datetime="2016-06-06T16:47:24+08:00" content="2016-06-06">
+            2016-06-06
           </time>
         </span>
 
@@ -225,113 +255,67 @@ window.location拿到锚点的内容
       
 
       
-        <span itemprop="articleBody"><h3 id="框架和库"><a href="#框架和库" class="headerlink" title="框架和库"></a>框架和库</h3><ul>
-<li>库就是有你亲自去调用对应的API，大部分功能逻辑由你自己去完成；</li>
-<li>框架就是一个大的平台，在平台里提供大量已经实现的的功能</li>
+        <span itemprop="articleBody"><h3 id="JS的组成"><a href="#JS的组成" class="headerlink" title="JS的组成"></a>JS的组成</h3><ul>
+<li>ECMAScript  规定JS语法规范和标准</li>
+<li>DOM   文档对象模型，提供了一套操作dom元素的api</li>
+<li>BOM   浏览器对象模型，提供了一套操作浏览器相关内容的api</li>
 </ul>
-<h3 id="SPA"><a href="#SPA" class="headerlink" title="SPA"></a>SPA</h3><p>simple page application单页面应用程序</p>
-<h3 id="利用锚点改变网页内容"><a href="#利用锚点改变网页内容" class="headerlink" title="利用锚点改变网页内容"></a>利用锚点改变网页内容</h3><ul>
-<li>window对象的hashchange事件</li>
-<li>window.location拿到锚点的内容</li>
-<li>根据不同的hash显示不同的内容<br>说明，制作页面锚点除了使用 锚点标签 name 属性之外，还可以使用 id 属性。锚点 <a> 标签中 href 属性的值为 # 开头加上目标的 name 或 id 的值</a></li>
+<h3 id="JS中的数据类型"><a href="#JS中的数据类型" class="headerlink" title="JS中的数据类型"></a>JS中的数据类型</h3><h4 id="简单数据类型"><a href="#简单数据类型" class="headerlink" title="简单数据类型"></a>简单数据类型</h4><ul>
+<li>string</li>
+<li>number</li>
+<li>boolean</li>
+<li>undefined</li>
+<li>null<h4 id="复杂数据类型"><a href="#复杂数据类型" class="headerlink" title="复杂数据类型"></a>复杂数据类型</h4></li>
+<li>Object</li>
+<li>function</li>
+<li>Math</li>
+<li>Array</li>
+<li>Date</li>
+<li>RegExp</li>
+<li>String</li>
+<li>Number</li>
+<li>Boolean</li>
 </ul>
-<h3 id="单页应用的好处"><a href="#单页应用的好处" class="headerlink" title="单页应用的好处"></a>单页应用的好处</h3><ul>
-<li>提高了整个应用程序的响应速度，增加了用户体验</li>
-<li>重用资源</li>
-<li>方便统一控制和代码重用</li>
+<h4 id="如何获取数据类型"><a href="#如何获取数据类型" class="headerlink" title="如何获取数据类型"></a>如何获取数据类型</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typeof</span> 数据</div><div class="line"><span class="comment">//返回值为string类型的类型名称</span></div><div class="line"><span class="comment">//如果是复杂类型的数据，获取到的都是object</span></div><div class="line"><span class="comment">//function获取到的是function</span></div></pre></td></tr></table></figure>
+<h3 id="值类型和引用类型"><a href="#值类型和引用类型" class="headerlink" title="值类型和引用类型"></a>值类型和引用类型</h3><h4 id="值类型"><a href="#值类型" class="headerlink" title="值类型"></a>值类型</h4><p>直接存储的就是数据本身的数据就是值类型的数据</p>
+<h4 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h4><p>存储的是数据的地址，数据单独存储的这种数据，就是引用类型的数据</p>
+<p>tips：不要去找堆和栈了！！！</p>
+<h4 id="值类型和引用类型的赋值特征"><a href="#值类型和引用类型的赋值特征" class="headerlink" title="值类型和引用类型的赋值特征"></a>值类型和引用类型的赋值特征</h4><ul>
+<li>值类型是将存储的值直接复制一份交给新的变量，两个变量值相等，但是互不影响</li>
+<li>引用类型是将数据的地址复制一份交给新的变量，两个变量同时指向同一个对象，修改一个，另一个也会受到影响</li>
 </ul>
-<h3 id="SPA面试问题"><a href="#SPA面试问题" class="headerlink" title="SPA面试问题"></a>SPA面试问题</h3><h4 id="SPA的核心是什么"><a href="#SPA的核心是什么" class="headerlink" title="SPA的核心是什么"></a>SPA的核心是什么</h4><ul>
-<li>锚点</li>
-<li>监听锚点的变化事件</li>
-<li>获取锚点内容</li>
-<li>根据不同的锚点内容做不同的内容改变<h4 id="如何在网页中解析URL地址http-www-baidu-com-a-b-c-foo-bar-amp-name-jack-abc"><a href="#如何在网页中解析URL地址http-www-baidu-com-a-b-c-foo-bar-amp-name-jack-abc" class="headerlink" title="如何在网页中解析URL地址http://www.baidu.com/a/b/c?foo=bar&amp;name=jack#/abc"></a>如何在网页中解析URL地址<a href="http://www.baidu.com/a/b/c?foo=bar&amp;name=jack#/abc" target="_blank" rel="external">http://www.baidu.com/a/b/c?foo=bar&amp;name=jack#/abc</a></h4></li>
-<li>字符串操作</li>
-<li>正则匹配</li>
-<li>DOM元素解析</li>
-</ul>
-<h3 id="什么是-AngularJS"><a href="#什么是-AngularJS" class="headerlink" title="什么是 AngularJS"></a>什么是 AngularJS</h3><ul>
-<li>一款非常优秀的前端高级 <strong>JavaScript 框架</strong></li>
-<li>2009 年起先由 Miško Hevery 和Adam Abron 开发</li>
-<li>后被 Google 收购，用于其多款产品</li>
-<li>有一个全职的开发团队继续开发和维护这个库</li>
-<li>可以轻松构建 <strong>SPA 应用程序</strong></li>
-<li>通过 <strong>指令</strong> 扩展了 HTML，通过 <strong>表达式</strong> 绑定数据到 HTML</li>
-<li><strong>最大程度上解放了 DOM 操作</strong></li>
-<li>构建更加动感的 HTML 应用程序</li>
-</ul>
-<p>AngularJS是为了克服HTML在构建应用上的不足而设计的。<br>AngularJS有着诸多特性，最为核心的是：</p>
+<h3 id="对象的动态特性"><a href="#对象的动态特性" class="headerlink" title="对象的动态特性"></a>对象的动态特性</h3><p>是指在对象创建完成之后，可以随时为对象添加成员的特性</p>
 <ul>
-<li>MVC</li>
-<li>模块化</li>
-<li>自动化双向数据绑定</li>
-<li>语义化标签、依赖注入等等</li>
-</ul>
-<h3 id="AngularJS-优缺点"><a href="#AngularJS-优缺点" class="headerlink" title="AngularJS 优缺点"></a>AngularJS 优缺点</h3><p>优点：</p>
-<ol>
-<li>AngularJS模板功能强大丰富，自带了极其丰富的angular指令。</li>
-<li>AngularJS是完全可扩展的，与其他库的兼容效果很好，每一个功能可以修改或更换，以满足开发者独特的开发流程和功能的需求。</li>
-<li>AngularJS是一个比较完善的前端MVC框架，包含服务，模板，数据双向绑定，模块化，路由，过滤器，依赖注入等所有功能；</li>
-<li>AngularJS是互联网巨人谷歌开发，这也意味着他有一个坚实的基础和社区支持。</li>
-</ol>
-<p>缺点：</p>
-<ol>
-<li>AngularJS强约束导致学习成本较高，对前端不友好。但遵守 AngularJS 的约定时，生产力会很高，对 后台服务器开发程序员友好。</li>
-<li>AngularJS不利于SEO，因为所有内容都是动态获取并渲染生成的，搜索引擎没法爬取。</li>
-<li>AngularJS作为 MVVM 框架，因为实现了数据的双向绑定，对于大数组、复杂对象会存在性能问题。</li>
-</ol>
-<h3 id="AngularJS-使用场景"><a href="#AngularJS-使用场景" class="headerlink" title="AngularJS 使用场景"></a>AngularJS 使用场景</h3><ul>
-<li>单页面应用程序</li>
-<li>复杂的后台管理系统<ul>
-<li>CRUD（增加 Create、查询 Retrieve、更新 Update、删除 Delete）</li>
-<li>繁杂的 DOM 操作处理的页面</li>
-</ul>
+<li><p>点语法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">对象名.属性名 = 值</div></pre></td></tr></table></figure>
+</li>
+<li><p>关联数组语法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">对象名[<span class="string">"属性名"</span>] = 值</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>Angular 是一个类 MVC 类结构的 JavaScript 框架，建议构建 CRUD 类型应用的时候使用它，<br>而对于那些图形编辑、游戏开发等应用，使用 Angular 就不如调用其它 JavaScript 类库方便，<br>如 jQuery。</p>
-<h3 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h3><ul>
-<li>当网页加载完毕，AngularJS 自动开始执行</li>
-<li>HTML 页面中 <code>ng-xxx</code> 的属性称之为指令（Directive）</li>
-<li><code>ng-app</code> 指令告诉 AngularJS ，<code>&lt;body&gt;</code> 元素是 AngularJS 应用程序管理的边界</li>
-<li><code>ng-init</code> 指令初始化 AngularJS 应用程序变量</li>
-<li><code>ng-model</code> 指令把文本框的 <code>value</code> 值绑定到变量 <code>name</code> 上</li>
-<li><code></code> 表达式就是把应用程序变量 <code>name</code> 绑定到某个元素的 <code>innerHTML</code></li>
+<h3 id="in-和-delete"><a href="#in-和-delete" class="headerlink" title="in 和 delete"></a>in 和 delete</h3><h4 id="in"><a href="#in" class="headerlink" title="in"></a>in</h4><ul>
+<li>for-in  遍历对象的键,遍历到的键为字符串类型</li>
+<li>判断对象是否可以访问某个属性 <code>&quot;属性名&quot; in 对象</code></li>
 </ul>
-<h3 id="AngularJS-表达式"><a href="#AngularJS-表达式" class="headerlink" title="AngularJS 表达式"></a>AngularJS 表达式</h3><ul>
-<li>AngularJS 表达式写在双大括号内：<code></code></li>
-<li>AngularJS 表达式把数据绑定到 HTML，与 <code>ng-bind</code> 指令基本一致</li>
-<li>AngularJS 将在表达式书写的位置”输出”数据<ul>
-<li>数字</li>
-<li>字符串</li>
-<li>对象</li>
-<li>数组</li>
+<h4 id="delete"><a href="#delete" class="headerlink" title="delete"></a>delete</h4><ul>
+<li>删除未使用var声明的变量</li>
+<li>删除对象的属性</li>
+<li>可以删除数组元素（删除元素不影响数组的长度，以及其他元素的索引）</li>
+<li>这个关键字的返回值不可靠</li>
 </ul>
-</li>
-<li>AngularJS 表达式 很像 JavaScript 表达式：它们可以包含字符串、操作符和变量<ul>
-<li>与 JavaScript 表达式不同，AngularJS 表达式可以写在 HTML 中</li>
-<li>与 JavaScript 表达式不同，AngularJS 表达式不支持条件判断，循环及异常</li>
-<li>与 JavaScript 表达式不同，AngularJS 表达式支持过滤器</li>
+<h3 id="逻辑中断"><a href="#逻辑中断" class="headerlink" title="逻辑中断"></a>逻辑中断</h3><ul>
+<li>表达式1 || 表达式2   表达式1为真返回表达1，为假返回表达式2</li>
+<li>表达式1 &amp;&amp; 表达式2   表达式1为假返回表达1，为真返回表达式2</li>
 </ul>
-</li>
+<h3 id="break和continue"><a href="#break和continue" class="headerlink" title="break和continue"></a>break和continue</h3><ul>
+<li>break 跳出整个循环 继续执行循环下面的代码</li>
+<li>continue 跳出本次虚幻，继续下次循环</li>
 </ul>
-<h3 id="AngularJS-指令"><a href="#AngularJS-指令" class="headerlink" title="AngularJS 指令"></a>AngularJS 指令</h3><p>AngularJS 指令是以 <code>ng-</code> 作为前缀的 HTML 属性，<br>AngularJS 通过内置的指令来为应用添加功能，<br>AngularJS 同时允许你自定义指令，从而构建更加超动感的 HTML。</p>
-<p>HTML5 允许扩展的（自制的）属性，以 <code>data-</code> 开头。<br>AngularJS 属性以 ng- 开头，但是也可以使用 <code>data-ng-</code> 来让网页对 HTML5 有效。</p>
-<ul>
-<li>ng-app</li>
-<li>ng-init</li>
-<li>ng-model</li>
-<li>ng-bind</li>
-<li>ng-click</li>
-<li>ng-repeat</li>
-</ul>
-<h3 id="使用总结"><a href="#使用总结" class="headerlink" title="使用总结"></a>使用总结</h3><ul>
-<li>AngularJS 最大程度上减少了页面上的 DOM 操作</li>
-<li>让开发人员更专注于业务操作</li>
-<li>通过简洁的指令结合页面结构与逻辑数据</li>
-<li>通过自定义指令实现组件化编程</li>
-<li>代码结构更合理</li>
-<li>维护成本更低</li>
-<li>AngularJS 解放了传统 JavaScript 中频繁的 DOM 操作</li>
-</ul>
+<h2 id="面向对象的基本介绍"><a href="#面向对象的基本介绍" class="headerlink" title="面向对象的基本介绍"></a>面向对象的基本介绍</h2><h3 id="面向对象的概念"><a href="#面向对象的概念" class="headerlink" title="面向对象的概念"></a>面向对象的概念</h3><p>面向对象是一种思维方式，把解决问题的关注点放在了解决问题所需要的一些列的对象上</p>
+<h3 id="面向过程的概念"><a href="#面向过程的概念" class="headerlink" title="面向过程的概念"></a>面向过程的概念</h3><p>面向过程也是一种思维方式，把解决问题的关注点放在了解决问题的每一个详细的步骤上！</p>
+<h3 id="什么是对象"><a href="#什么是对象" class="headerlink" title="什么是对象"></a>什么是对象</h3><p>万物皆对象</p>
+<h3 id="什么是js中的对象"><a href="#什么是js中的对象" class="headerlink" title="什么是js中的对象"></a>什么是js中的对象</h3><p>无序的键值对儿的集合</p>
+<h3 id="面向对象和面向过程的关系"><a href="#面向对象和面向过程的关系" class="headerlink" title="面向对象和面向过程的关系"></a>面向对象和面向过程的关系</h3><p>面向对象其实就是对面向过程的封装！</p>
 </span>
       
     </div>
@@ -343,13 +327,11 @@ window.location拿到锚点的内容
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/25/一些小问题汇总/" rel="prev">一些小问题汇总</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/08/一些工具整理/" rel="next">一些工具整理</a>
+              <a href="/2016/02/15/http协议/" rel="next">angular(一)</a>
             
           </div>
         </div>
@@ -538,10 +520,10 @@ window.location拿到锚点的内容
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table Of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -555,22 +537,22 @@ window.location拿到锚点的内容
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
               <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">categories</span>
+              <span class="site-state-item-name">Kategorien</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
               <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">tags</span>
+              <span class="site-state-item-name">Tags</span>
               </a>
           </div>
 
@@ -597,7 +579,7 @@ window.location拿到锚点的内容
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#框架和库"><span class="nav-number">1.</span> <span class="nav-text">框架和库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SPA"><span class="nav-number">2.</span> <span class="nav-text">SPA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#利用锚点改变网页内容"><span class="nav-number">3.</span> <span class="nav-text">利用锚点改变网页内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单页应用的好处"><span class="nav-number">4.</span> <span class="nav-text">单页应用的好处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SPA面试问题"><span class="nav-number">5.</span> <span class="nav-text">SPA面试问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SPA的核心是什么"><span class="nav-number">5.1.</span> <span class="nav-text">SPA的核心是什么</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何在网页中解析URL地址http-www-baidu-com-a-b-c-foo-bar-amp-name-jack-abc"><span class="nav-number">5.2.</span> <span class="nav-text">如何在网页中解析URL地址http://www.baidu.com/a/b/c?foo=bar&name=jack#/abc</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是-AngularJS"><span class="nav-number">6.</span> <span class="nav-text">什么是 AngularJS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AngularJS-优缺点"><span class="nav-number">7.</span> <span class="nav-text">AngularJS 优缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AngularJS-使用场景"><span class="nav-number">8.</span> <span class="nav-text">AngularJS 使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码解析"><span class="nav-number">9.</span> <span class="nav-text">代码解析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AngularJS-表达式"><span class="nav-number">10.</span> <span class="nav-text">AngularJS 表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AngularJS-指令"><span class="nav-number">11.</span> <span class="nav-text">AngularJS 指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用总结"><span class="nav-number">12.</span> <span class="nav-text">使用总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#JS的组成"><span class="nav-number">1.</span> <span class="nav-text">JS的组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JS中的数据类型"><span class="nav-number">2.</span> <span class="nav-text">JS中的数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#简单数据类型"><span class="nav-number">2.1.</span> <span class="nav-text">简单数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复杂数据类型"><span class="nav-number">2.2.</span> <span class="nav-text">复杂数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何获取数据类型"><span class="nav-number">2.3.</span> <span class="nav-text">如何获取数据类型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#值类型和引用类型"><span class="nav-number">3.</span> <span class="nav-text">值类型和引用类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#值类型"><span class="nav-number">3.1.</span> <span class="nav-text">值类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#引用类型"><span class="nav-number">3.2.</span> <span class="nav-text">引用类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#值类型和引用类型的赋值特征"><span class="nav-number">3.3.</span> <span class="nav-text">值类型和引用类型的赋值特征</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象的动态特性"><span class="nav-number">4.</span> <span class="nav-text">对象的动态特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#in-和-delete"><span class="nav-number">5.</span> <span class="nav-text">in 和 delete</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#in"><span class="nav-number">5.1.</span> <span class="nav-text">in</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#delete"><span class="nav-number">5.2.</span> <span class="nav-text">delete</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑中断"><span class="nav-number">6.</span> <span class="nav-text">逻辑中断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#break和continue"><span class="nav-number">7.</span> <span class="nav-text">break和continue</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象的基本介绍"><span class="nav-number"></span> <span class="nav-text">面向对象的基本介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#面向对象的概念"><span class="nav-number">1.</span> <span class="nav-text">面向对象的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#面向过程的概念"><span class="nav-number">2.</span> <span class="nav-text">面向过程的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是对象"><span class="nav-number">3.</span> <span class="nav-text">什么是对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是js中的对象"><span class="nav-number">4.</span> <span class="nav-text">什么是js中的对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#面向对象和面向过程的关系"><span class="nav-number">5.</span> <span class="nav-text">面向对象和面向过程的关系</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

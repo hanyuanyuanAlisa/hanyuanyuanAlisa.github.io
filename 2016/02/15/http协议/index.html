@@ -37,19 +37,40 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="框架和库
+库就是有你亲自去调用对应的API，大部分功能逻辑由你自己去完成；
+框架就是一个大的平台，在平台里提供大量已经实现的的功能
+
+SPAsimple page application单页面应用程序
+利用锚点改变网页内容
+window对象的hashchange事件
+window.location拿到锚点的内容
+根据不同的hash显示不同的内容说明，制作页面锚点除了使用 锚点标签 name 属性之">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2017/02/06/hello-world/index.html">
+<meta property="og:title" content="angular(一)">
+<meta property="og:url" content="http://yoursite.com/2016/02/15/http协议/index.html">
 <meta property="og:site_name" content="韩渊媛">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2017-02-06T06:55:00.299Z">
+<meta property="og:description" content="框架和库
+库就是有你亲自去调用对应的API，大部分功能逻辑由你自己去完成；
+框架就是一个大的平台，在平台里提供大量已经实现的的功能
+
+SPAsimple page application单页面应用程序
+利用锚点改变网页内容
+window对象的hashchange事件
+window.location拿到锚点的内容
+根据不同的hash显示不同的内容说明，制作页面锚点除了使用 锚点标签 name 属性之">
+<meta property="og:updated_time" content="2017-03-03T11:21:41.323Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="angular(一)">
+<meta name="twitter:description" content="框架和库
+库就是有你亲自去调用对应的API，大部分功能逻辑由你自己去完成；
+框架就是一个大的平台，在平台里提供大量已经实现的的功能
+
+SPAsimple page application单页面应用程序
+利用锚点改变网页内容
+window对象的hashchange事件
+window.location拿到锚点的内容
+根据不同的hash显示不同的内容说明，制作页面锚点除了使用 锚点标签 name 属性之">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -59,7 +80,7 @@ Quick">
   };
 </script>
 
-  <title> Hello World | 韩渊媛 </title>
+  <title> angular(一) | 韩渊媛 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -110,7 +131,7 @@ Quick">
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             <i class="menu-item-icon icon-next-home"></i> <br />
-            Home
+            Startseite
           </a>
         </li>
       
@@ -118,7 +139,7 @@ Quick">
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             <i class="menu-item-icon icon-next-categories"></i> <br />
-            Categories
+            Kategorien
           </a>
         </li>
       
@@ -126,7 +147,7 @@ Quick">
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             <i class="menu-item-icon icon-next-archives"></i> <br />
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -142,7 +163,7 @@ Quick">
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             <i class="menu-item-icon icon-next-about"></i> <br />
-            About
+            Über
           </a>
         </li>
       
@@ -176,7 +197,7 @@ Quick">
           
           
             
-              Hello World
+              angular(一)
             
           
         </h1>
@@ -184,9 +205,9 @@ Quick">
 
       <div class="post-meta">
         <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2017-02-06T14:55:00+08:00" content="2017-02-06">
-            2017-02-06
+          Veröffentlicht am
+          <time itemprop="dateCreated" datetime="2016-02-15T15:49:07+08:00" content="2016-02-15">
+            2016-02-15
           </time>
         </span>
 
@@ -204,15 +225,113 @@ Quick">
       
 
       
-        <span itemprop="articleBody"><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <span itemprop="articleBody"><h3 id="框架和库"><a href="#框架和库" class="headerlink" title="框架和库"></a>框架和库</h3><ul>
+<li>库就是有你亲自去调用对应的API，大部分功能逻辑由你自己去完成；</li>
+<li>框架就是一个大的平台，在平台里提供大量已经实现的的功能</li>
+</ul>
+<h3 id="SPA"><a href="#SPA" class="headerlink" title="SPA"></a>SPA</h3><p>simple page application单页面应用程序</p>
+<h3 id="利用锚点改变网页内容"><a href="#利用锚点改变网页内容" class="headerlink" title="利用锚点改变网页内容"></a>利用锚点改变网页内容</h3><ul>
+<li>window对象的hashchange事件</li>
+<li>window.location拿到锚点的内容</li>
+<li>根据不同的hash显示不同的内容<br>说明，制作页面锚点除了使用 锚点标签 name 属性之外，还可以使用 id 属性。锚点 <a> 标签中 href 属性的值为 # 开头加上目标的 name 或 id 的值</a></li>
+</ul>
+<h3 id="单页应用的好处"><a href="#单页应用的好处" class="headerlink" title="单页应用的好处"></a>单页应用的好处</h3><ul>
+<li>提高了整个应用程序的响应速度，增加了用户体验</li>
+<li>重用资源</li>
+<li>方便统一控制和代码重用</li>
+</ul>
+<h3 id="SPA面试问题"><a href="#SPA面试问题" class="headerlink" title="SPA面试问题"></a>SPA面试问题</h3><h4 id="SPA的核心是什么"><a href="#SPA的核心是什么" class="headerlink" title="SPA的核心是什么"></a>SPA的核心是什么</h4><ul>
+<li>锚点</li>
+<li>监听锚点的变化事件</li>
+<li>获取锚点内容</li>
+<li>根据不同的锚点内容做不同的内容改变<h4 id="如何在网页中解析URL地址http-www-baidu-com-a-b-c-foo-bar-amp-name-jack-abc"><a href="#如何在网页中解析URL地址http-www-baidu-com-a-b-c-foo-bar-amp-name-jack-abc" class="headerlink" title="如何在网页中解析URL地址http://www.baidu.com/a/b/c?foo=bar&amp;name=jack#/abc"></a>如何在网页中解析URL地址<a href="http://www.baidu.com/a/b/c?foo=bar&amp;name=jack#/abc" target="_blank" rel="external">http://www.baidu.com/a/b/c?foo=bar&amp;name=jack#/abc</a></h4></li>
+<li>字符串操作</li>
+<li>正则匹配</li>
+<li>DOM元素解析</li>
+</ul>
+<h3 id="什么是-AngularJS"><a href="#什么是-AngularJS" class="headerlink" title="什么是 AngularJS"></a>什么是 AngularJS</h3><ul>
+<li>一款非常优秀的前端高级 <strong>JavaScript 框架</strong></li>
+<li>2009 年起先由 Miško Hevery 和Adam Abron 开发</li>
+<li>后被 Google 收购，用于其多款产品</li>
+<li>有一个全职的开发团队继续开发和维护这个库</li>
+<li>可以轻松构建 <strong>SPA 应用程序</strong></li>
+<li>通过 <strong>指令</strong> 扩展了 HTML，通过 <strong>表达式</strong> 绑定数据到 HTML</li>
+<li><strong>最大程度上解放了 DOM 操作</strong></li>
+<li>构建更加动感的 HTML 应用程序</li>
+</ul>
+<p>AngularJS是为了克服HTML在构建应用上的不足而设计的。<br>AngularJS有着诸多特性，最为核心的是：</p>
+<ul>
+<li>MVC</li>
+<li>模块化</li>
+<li>自动化双向数据绑定</li>
+<li>语义化标签、依赖注入等等</li>
+</ul>
+<h3 id="AngularJS-优缺点"><a href="#AngularJS-优缺点" class="headerlink" title="AngularJS 优缺点"></a>AngularJS 优缺点</h3><p>优点：</p>
+<ol>
+<li>AngularJS模板功能强大丰富，自带了极其丰富的angular指令。</li>
+<li>AngularJS是完全可扩展的，与其他库的兼容效果很好，每一个功能可以修改或更换，以满足开发者独特的开发流程和功能的需求。</li>
+<li>AngularJS是一个比较完善的前端MVC框架，包含服务，模板，数据双向绑定，模块化，路由，过滤器，依赖注入等所有功能；</li>
+<li>AngularJS是互联网巨人谷歌开发，这也意味着他有一个坚实的基础和社区支持。</li>
+</ol>
+<p>缺点：</p>
+<ol>
+<li>AngularJS强约束导致学习成本较高，对前端不友好。但遵守 AngularJS 的约定时，生产力会很高，对 后台服务器开发程序员友好。</li>
+<li>AngularJS不利于SEO，因为所有内容都是动态获取并渲染生成的，搜索引擎没法爬取。</li>
+<li>AngularJS作为 MVVM 框架，因为实现了数据的双向绑定，对于大数组、复杂对象会存在性能问题。</li>
+</ol>
+<h3 id="AngularJS-使用场景"><a href="#AngularJS-使用场景" class="headerlink" title="AngularJS 使用场景"></a>AngularJS 使用场景</h3><ul>
+<li>单页面应用程序</li>
+<li>复杂的后台管理系统<ul>
+<li>CRUD（增加 Create、查询 Retrieve、更新 Update、删除 Delete）</li>
+<li>繁杂的 DOM 操作处理的页面</li>
+</ul>
+</li>
+</ul>
+<p>Angular 是一个类 MVC 类结构的 JavaScript 框架，建议构建 CRUD 类型应用的时候使用它，<br>而对于那些图形编辑、游戏开发等应用，使用 Angular 就不如调用其它 JavaScript 类库方便，<br>如 jQuery。</p>
+<h3 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h3><ul>
+<li>当网页加载完毕，AngularJS 自动开始执行</li>
+<li>HTML 页面中 <code>ng-xxx</code> 的属性称之为指令（Directive）</li>
+<li><code>ng-app</code> 指令告诉 AngularJS ，<code>&lt;body&gt;</code> 元素是 AngularJS 应用程序管理的边界</li>
+<li><code>ng-init</code> 指令初始化 AngularJS 应用程序变量</li>
+<li><code>ng-model</code> 指令把文本框的 <code>value</code> 值绑定到变量 <code>name</code> 上</li>
+<li><code></code> 表达式就是把应用程序变量 <code>name</code> 绑定到某个元素的 <code>innerHTML</code></li>
+</ul>
+<h3 id="AngularJS-表达式"><a href="#AngularJS-表达式" class="headerlink" title="AngularJS 表达式"></a>AngularJS 表达式</h3><ul>
+<li>AngularJS 表达式写在双大括号内：<code></code></li>
+<li>AngularJS 表达式把数据绑定到 HTML，与 <code>ng-bind</code> 指令基本一致</li>
+<li>AngularJS 将在表达式书写的位置”输出”数据<ul>
+<li>数字</li>
+<li>字符串</li>
+<li>对象</li>
+<li>数组</li>
+</ul>
+</li>
+<li>AngularJS 表达式 很像 JavaScript 表达式：它们可以包含字符串、操作符和变量<ul>
+<li>与 JavaScript 表达式不同，AngularJS 表达式可以写在 HTML 中</li>
+<li>与 JavaScript 表达式不同，AngularJS 表达式不支持条件判断，循环及异常</li>
+<li>与 JavaScript 表达式不同，AngularJS 表达式支持过滤器</li>
+</ul>
+</li>
+</ul>
+<h3 id="AngularJS-指令"><a href="#AngularJS-指令" class="headerlink" title="AngularJS 指令"></a>AngularJS 指令</h3><p>AngularJS 指令是以 <code>ng-</code> 作为前缀的 HTML 属性，<br>AngularJS 通过内置的指令来为应用添加功能，<br>AngularJS 同时允许你自定义指令，从而构建更加超动感的 HTML。</p>
+<p>HTML5 允许扩展的（自制的）属性，以 <code>data-</code> 开头。<br>AngularJS 属性以 ng- 开头，但是也可以使用 <code>data-ng-</code> 来让网页对 HTML5 有效。</p>
+<ul>
+<li>ng-app</li>
+<li>ng-init</li>
+<li>ng-model</li>
+<li>ng-bind</li>
+<li>ng-click</li>
+<li>ng-repeat</li>
+</ul>
+<h3 id="使用总结"><a href="#使用总结" class="headerlink" title="使用总结"></a>使用总结</h3><ul>
+<li>AngularJS 最大程度上减少了页面上的 DOM 操作</li>
+<li>让开发人员更专注于业务操作</li>
+<li>通过简洁的指令结合页面结构与逻辑数据</li>
+<li>通过自定义指令实现组件化编程</li>
+<li>代码结构更合理</li>
+<li>维护成本更低</li>
+<li>AngularJS 解放了传统 JavaScript 中频繁的 DOM 操作</li>
+</ul>
 </span>
       
     </div>
@@ -224,11 +343,13 @@ Quick">
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/06/myblog-firstday/" rel="prev">版本控制管理</a>
+              <a href="/2016/06/06/node知识整理/" rel="prev">面向对象</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/12/20/封装框架/" rel="next">面向对象（一）</a>
             
           </div>
         </div>
@@ -417,10 +538,10 @@ Quick">
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table Of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -434,22 +555,22 @@ Quick">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
               <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">categories</span>
+              <span class="site-state-item-name">Kategorien</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
               <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">tags</span>
+              <span class="site-state-item-name">Tags</span>
               </a>
           </div>
 
@@ -476,7 +597,7 @@ Quick">
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#框架和库"><span class="nav-number">1.</span> <span class="nav-text">框架和库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SPA"><span class="nav-number">2.</span> <span class="nav-text">SPA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#利用锚点改变网页内容"><span class="nav-number">3.</span> <span class="nav-text">利用锚点改变网页内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单页应用的好处"><span class="nav-number">4.</span> <span class="nav-text">单页应用的好处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SPA面试问题"><span class="nav-number">5.</span> <span class="nav-text">SPA面试问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SPA的核心是什么"><span class="nav-number">5.1.</span> <span class="nav-text">SPA的核心是什么</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何在网页中解析URL地址http-www-baidu-com-a-b-c-foo-bar-amp-name-jack-abc"><span class="nav-number">5.2.</span> <span class="nav-text">如何在网页中解析URL地址http://www.baidu.com/a/b/c?foo=bar&name=jack#/abc</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是-AngularJS"><span class="nav-number">6.</span> <span class="nav-text">什么是 AngularJS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AngularJS-优缺点"><span class="nav-number">7.</span> <span class="nav-text">AngularJS 优缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AngularJS-使用场景"><span class="nav-number">8.</span> <span class="nav-text">AngularJS 使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码解析"><span class="nav-number">9.</span> <span class="nav-text">代码解析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AngularJS-表达式"><span class="nav-number">10.</span> <span class="nav-text">AngularJS 表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AngularJS-指令"><span class="nav-number">11.</span> <span class="nav-text">AngularJS 指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用总结"><span class="nav-number">12.</span> <span class="nav-text">使用总结</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
