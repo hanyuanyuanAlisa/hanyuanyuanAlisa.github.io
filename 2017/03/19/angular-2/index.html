@@ -1,0 +1,977 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mala">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+  <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+
+
+  <meta name="keywords" content="Hexo,next" />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="SPA
+单页面应用程序
+和传统网站不同：刷新跳转
+一个页面：所有的页面模块内容都是通过在一个页面中异步动态的渲染加载
+不利于 SEO
+用户体验非常好
+服务端只需要提供数据接口
+前端可以专门构建用户界面，像一些路由、等操作完全都可以搬到前端来完成
+前后端分离
+例如：后台管理系统
+
+
+表达式
+指令：Directive
+在 ng 中，通过指令扩展了 HTML
+ng 就是为 HTML 提供了一大堆具有一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="angular(1)">
+<meta property="og:url" content="http://yoursite.com/2017/03/19/angular-2/index.html">
+<meta property="og:site_name" content="韩渊媛">
+<meta property="og:description" content="SPA
+单页面应用程序
+和传统网站不同：刷新跳转
+一个页面：所有的页面模块内容都是通过在一个页面中异步动态的渲染加载
+不利于 SEO
+用户体验非常好
+服务端只需要提供数据接口
+前端可以专门构建用户界面，像一些路由、等操作完全都可以搬到前端来完成
+前后端分离
+例如：后台管理系统
+
+
+表达式
+指令：Directive
+在 ng 中，通过指令扩展了 HTML
+ng 就是为 HTML 提供了一大堆具有一">
+<meta property="og:image" content="http://yoursite.com/img/$scope.jpg">
+<meta property="og:updated_time" content="2017-03-19T15:49:48.364Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="angular(1)">
+<meta name="twitter:description" content="SPA
+单页面应用程序
+和传统网站不同：刷新跳转
+一个页面：所有的页面模块内容都是通过在一个页面中异步动态的渲染加载
+不利于 SEO
+用户体验非常好
+服务端只需要提供数据接口
+前端可以专门构建用户界面，像一些路由、等操作完全都可以搬到前端来完成
+前后端分离
+例如：后台管理系统
+
+
+表达式
+指令：Directive
+在 ng 中，通过指令扩展了 HTML
+ng 就是为 HTML 提供了一大堆具有一">
+<meta name="twitter:image" content="http://yoursite.com/img/$scope.jpg">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mala',
+    sidebar: 'post'
+  };
+</script>
+
+  <title> angular(1) | 韩渊媛 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title"></span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            Kategorien
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            Über
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              angular(1)
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Veröffentlicht am
+          <time itemprop="dateCreated" datetime="2017-03-19T23:47:41+08:00" content="2017-03-19">
+            2017-03-19
+          </time>
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><ul>
+<li>SPA<ul>
+<li>单页面应用程序</li>
+<li>和传统网站不同：刷新跳转</li>
+<li>一个页面：所有的页面模块内容都是通过在一个页面中异步动态的渲染加载</li>
+<li>不利于 SEO</li>
+<li>用户体验非常好</li>
+<li>服务端只需要提供数据接口</li>
+<li>前端可以专门构建用户界面，像一些路由、等操作完全都可以搬到前端来完成</li>
+<li>前后端分离</li>
+<li>例如：后台管理系统</li>
+</ul>
+</li>
+<li>表达式</li>
+<li>指令：Directive<ul>
+<li>在 ng 中，通过指令扩展了 HTML</li>
+<li>ng 就是为 HTML 提供了一大堆具有一定功能的属性：被称之为指令</li>
+</ul>
+</li>
+<li>ng-app<ul>
+<li>ng 应用程序启动的入口标识</li>
+</ul>
+</li>
+<li>ng-init<br>+ </li>
+<li>ng-bind</li>
+<li>ng-model<ul>
+<li>一般用于将模型数据和表单控件的 value 绑定起来</li>
+<li>当表单控件的 value 改变的时候，模型数据也跟着变</li>
+<li>当模块数据改变的时候，不仅仅表单控件的 value 发生变化，而且所有绑定引用了该模型数据的元素都会跟着变</li>
+</ul>
+</li>
+<li>ng-class<ul>
+<li>使用规则：ng-class=”{类名: bool类型数据, 类名: bool类型数据}”</li>
+<li>当 bool 类型数据为 true 则 作用该类名</li>
+<li>当 bool 类型数据为 false 则去除给类名</li>
+</ul>
+</li>
+<li>ng-repeat</li>
+<li>ng-click</li>
+<li>angular.module</li>
+<li>controller</li>
+</ul>
+<hr>
+<h2 id="AngularJS-Debug"><a href="#AngularJS-Debug" class="headerlink" title="AngularJS Debug"></a>AngularJS Debug</h2><h3 id="将-scope-模型对象挂载给-window"><a href="#将-scope-模型对象挂载给-window" class="headerlink" title="将 $scope 模型对象挂载给 window"></a>将 $scope 模型对象挂载给 window</h3><h3 id="Chrome-插件：AngularJS-Batarang"><a href="#Chrome-插件：AngularJS-Batarang" class="headerlink" title="Chrome 插件：AngularJS Batarang"></a>Chrome 插件：AngularJS Batarang</h3><ol>
+<li>安装</li>
+<li>安装结束重启下浏览器</li>
+<li>调试之前一定要以 http 服务的形式打开你要调试的页面</li>
+<li>在控制台中找到：AngularJS 选项卡</li>
+<li>勾选 Enable 启用（如果不成功，把浏览器重新打开试一下）</li>
+</ol>
+<hr>
+<h2 id="指令：Directive"><a href="#指令：Directive" class="headerlink" title="指令：Directive"></a>指令：Directive</h2><p>AngularJS 通过被称为 指令 的新属性来扩展 HTML，<br>具体表现形式一般为带有前缀 <code>ng-xxx</code> 的 HTML 属性。</p>
+<h3 id="指令的使用形式"><a href="#指令的使用形式" class="headerlink" title="指令的使用形式"></a>指令的使用形式</h3><ul>
+<li>ng-xxx 的属性本身并不是标准中定义的属性</li>
+<li>很多情况下无法通过语法校验</li>
+<li>HTML5 允许扩展的属性，以 <code>data-</code> 开头</li>
+<li>在 ng 中可以使用 <code>data-ng-</code> 作为前缀来让网页对 HTML5 有效</li>
+<li>二者效果相同</li>
+</ul>
+<h3 id="内置指令"><a href="#内置指令" class="headerlink" title="内置指令"></a>内置指令</h3><p>AngularJS 内置了很多指令，用来增强 HTML，以下是一些常用内置指令的介绍。</p>
+<ul>
+<li>ngApp</li>
+<li>ngController</li>
+<li>ngInit</li>
+<li>ngBind</li>
+<li>ng-bind</li>
+<li>ng-non-bindable</li>
+<li>ngBindHtml</li>
+<li>ngRepeat<ul>
+<li>普通数据重复报错问题</li>
+</ul>
+</li>
+<li>ng-class</li>
+<li>ng-class-even</li>
+<li>ng-class-odd</li>
+<li>ng-hide-show-if-switch</li>
+<li>ng-src</li>
+<li>ng-checked : 单选/复选是否选中，只是单向绑定数据</li>
+<li>ng-disabled : 是否禁用</li>
+<li>ng-readonly : 是否只读</li>
+<li>ng-selected : 是否选中，只是单向数据绑定</li>
+<li>ng-click ：鼠标单击</li>
+<li>ng-blur ：失去焦点</li>
+<li>ng-focus ：得到焦点</li>
+<li>ng-change ：发生改变</li>
+<li>ng-copy ：拷贝完成</li>
+<li>ng-dblclick ：鼠标双击</li>
+<li>ng-submit：表单提交</li>
+<li>ng-copy</li>
+<li>ng-cut</li>
+<li>ng-paste</li>
+<li>ng-keydown</li>
+<li>ng-keyup</li>
+<li>ng-mousedown</li>
+<li>ng-mouseenter</li>
+<li>ng-mouseleave</li>
+<li>ng-mouseover</li>
+<li>ng-mouseup</li>
+</ul>
+<hr>
+<h2 id="控制器：Controller"><a href="#控制器：Controller" class="headerlink" title="控制器：Controller"></a>控制器：Controller</h2><ul>
+<li>ng 中的控制器用来对 scope 进行操作<ul>
+<li>包括初始化数据和定义事件响应函数等</li>
+</ul>
+</li>
+<li>ng 用来解耦业务逻辑层和视图层的关键</li>
+<li>controller 操作 scope，View 则展现 scope 的内容</li>
+<li>传统前端程序中大量复杂的 DOM 操作逻辑都被转变成对 scope 的操作</li>
+</ul>
+<h3 id="定义控制器的三种方式"><a href="#定义控制器的三种方式" class="headerlink" title="定义控制器的三种方式"></a>定义控制器的三种方式</h3><p>第一种：传统方式，使用全局函数定义控制器（1.5 之后已被废弃）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">DemoCtrl</span>(<span class="params">$scope</span>) </span>&#123;</div><div class="line">  <span class="comment">// code here</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>第二种：挂载在某个模块下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">angular.module(<span class="string">'DemoApp'</span>, [])</div><div class="line">  .controller(<span class="string">'DemoCtrl'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope</span>) </span>&#123;</div><div class="line">    <span class="comment">// code here</span></div><div class="line">  &#125;)</div></pre></td></tr></table></figure>
+<p>第三种：最正确的方式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 解决因为代码压缩造成注入对象失败问题的方式就是将第二个参数换成一个数组</span></div><div class="line">angular.module(<span class="string">'DemoApp'</span>, [])</div><div class="line">  .controller(<span class="string">'DemoCtrl'</span>, [<span class="string">'$scope'</span>, <span class="string">'$log'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope, $log</span>) </span>&#123;</div><div class="line">    <span class="comment">// code here</span></div><div class="line">  &#125;])</div></pre></td></tr></table></figure>
+<h3 id="如何划分控制器"><a href="#如何划分控制器" class="headerlink" title="如何划分控制器"></a>如何划分控制器</h3><p>一个页面中，按照不同的功能业务划分不同的控制器。</p>
+<hr>
+<h2 id="视图模型（View-Model）-scope"><a href="#视图模型（View-Model）-scope" class="headerlink" title="视图模型（View Model）: $scope"></a>视图模型（View Model）: $scope</h2><p><img src="img/$scope.jpg" alt="scope"></p>
+<ul>
+<li>$scope 是用来视图和数据之间的胶水、粘合剂</li>
+<li>视图和控制器之间的数据桥梁</li>
+<li>用于在视图和控制器之间传递数据</li>
+<li>用来暴露数据模型（数据、行为）</li>
+<li>监视模型数据的变化，做出相应的动作 <code>$scope.$watch</code></li>
+</ul>
+<h3 id="如何设计-scope"><a href="#如何设计-scope" class="headerlink" title="如何设计 $scope"></a>如何设计 $scope</h3><p>根据原型抽象数据和行为：</p>
+<ul>
+<li>数据</li>
+<li>行为</li>
+</ul>
+<h3 id="ViewModel"><a href="#ViewModel" class="headerlink" title="ViewModel"></a>ViewModel</h3><p>ng 官方把自己定义为一个 MVC 框架。</p>
+<p>很多开发使用者把它称之为 MVVM 框架。</p>
+<ul>
+<li>$scope 实际上就是 MVVM 中所谓的 VM（视图模型）</li>
+<li>正式因为 $scope 在 ng 中大量使用甚至盖过了 c 的概念，所以很多人把 ng 称之为 mvvm 框架</li>
+<li>这一点倒是无所谓</li>
+</ul>
+<h3 id="数据模型作用域"><a href="#数据模型作用域" class="headerlink" title="数据模型作用域"></a>数据模型作用域</h3><hr>
+<h2 id="模块：Module"><a href="#模块：Module" class="headerlink" title="模块：Module"></a>模块：Module</h2><ul>
+<li>模块定义了一个应用程序</li>
+<li>模块是应用程序中不同部分的容器</li>
+<li>模块是应用控制器的容器</li>
+<li>控制器通常属于一个模块</li>
+</ul>
+<p>ng 中模块的引入最重要的目的就是为了解决原来全局定义的控制器污染的问题，<br>还有一个目的就是让我们以模块的形式划分架构。</p>
+<blockquote>
+<p>可以通过 <code>angular.module()</code> 方法操作模块<br><strong>注意</strong>：该方法只有在传入两个参数时才会创建模块，否则为获取已有模块</p>
+</blockquote>
+<h3 id="定义模块"><a href="#定义模块" class="headerlink" title="定义模块"></a>定义模块</h3><p>定义一个模块：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 注意：必须指定第二个参数，否则变成获取已定义的模块</span></div><div class="line"><span class="keyword">var</span> demoApp = angular.module(<span class="string">'DemoApp'</span>, [])</div></pre></td></tr></table></figure>
+<p>获取已有模块：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> demoApp = angular.module(<span class="string">'DemoApp'</span>)</div></pre></td></tr></table></figure>
+<p>定义依赖别的模块的模块：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> demoApp = angular.module(<span class="string">'DemoApp'</span>, [<span class="string">'Module1'</span>, <span class="string">'Module2'</span>])</div></pre></td></tr></table></figure>
+<h3 id="如何划分模块"><a href="#如何划分模块" class="headerlink" title="如何划分模块"></a>如何划分模块</h3><h3 id="加载多个模块"><a href="#加载多个模块" class="headerlink" title="加载多个模块"></a>加载多个模块</h3><ul>
+<li>angular.bootstrap(document, [‘demo’])</li>
+<li>angular.module(‘MainModule’, [‘Module1’, ‘Module2’, ‘Module3’[,ModuleName]])</li>
+</ul>
+<hr>
+<h2 id="过滤器：Filter"><a href="#过滤器：Filter" class="headerlink" title="过滤器：Filter"></a>过滤器：Filter</h2><p>ng 中提供了过滤器规则，作用就是用来帮你方便的格式化数据的。具体使用语法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;&#123; express | filter-name &#125;&#125;</div><div class="line">&#123;&#123; express | filter-name : arg &#125;&#125;</div></pre></td></tr></table></figure>
+<h3 id="内置过滤器"><a href="#内置过滤器" class="headerlink" title="内置过滤器"></a>内置过滤器</h3><ul>
+<li>currency<ul>
+<li>基本上不用</li>
+</ul>
+</li>
+<li>number<ul>
+<li>数字</li>
+</ul>
+</li>
+<li>date<ul>
+<li>日期</li>
+</ul>
+</li>
+<li>json</li>
+<li>uppercase<ul>
+<li>大写</li>
+</ul>
+</li>
+<li>lowercase<ul>
+<li>小写</li>
+</ul>
+</li>
+<li>orderBy<ul>
+<li>排序</li>
+</ul>
+</li>
+<li>limitTo<ul>
+<li>限制</li>
+</ul>
+</li>
+<li>filter<ul>
+<li>过滤器里面的过滤器</li>
+</ul>
+</li>
+</ul>
+<h3 id="自定义过滤器"><a href="#自定义过滤器" class="headerlink" title="自定义过滤器"></a>自定义过滤器</h3><p>过滤器的本质就是一个方法：你给它一个参数，它帮你返回一个处理过后的数据。</p>
+<blockquote>
+<p>文档：<a href="https://docs.angularjs.org/api/ng/type/angular.Module" target="_blank" rel="external">https://docs.angularjs.org/api/ng/type/angular.Module</a></p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">angular</div><div class="line">  .module(<span class="string">'module'</span>)</div><div class="line">  .filter(<span class="string">'name'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">x</span>) </span>&#123;</div><div class="line">      <span class="comment">// code here</span></div><div class="line">      <span class="keyword">return</span> xxx</div><div class="line">    &#125;</div><div class="line">  &#125;)</div></pre></td></tr></table></figure></span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/13/hello-world/" rel="next">Hello World</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div>
+      
+        <style type="text/css">
+
+    .donate_bar {
+        text-align: center;
+        margin-top : 5%;
+    }
+
+    .donate_bar.hidden {
+        display:none;
+    }
+/*
+    .donate_bar a.btn_donate {
+        display: inline-block;
+        width: 82px;
+        height: 82px;
+        margin-left:auto;
+        margin-right:auto;
+
+        background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat;
+        _background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat; 
+
+        -webkit-transition: background 0s;
+        -moz-transition: background 0s;
+        -o-transition: background 0s;
+        -ms-transition: background 0s;
+        transition: background 0s;
+    }
+*/
+    .donate_bar a.btn_donate:hover { 
+        // background-position: 0px -82px;
+        color: #87daff;
+    }
+
+    .donate_bar .donate_txt {
+        display: block;
+        color: #9d9d9d;
+        font: 14px/2 "Microsoft Yahei";
+    }
+
+    .bold { 
+        font-weight: bold; 
+    }
+
+    .post-donate a {
+        border-bottom: 0px;
+    }
+
+    #donate_guide table {
+        border: none;
+    }
+
+    #donate_guide td {
+        border-bottom: none;
+        border-right: none;
+        // background: #333333;
+        valign: top;
+    }
+
+</style>
+
+
+
+    
+
+    <div class ="post-donate">
+        <div id="donate_board" class="donate_bar center">
+              <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏">赏</a>
+              <span id="donate_txt" class="donate_txt">
+                   
+                        仅仅是一个功能
+                   
+              </span>
+            <br>
+        </div>  
+  
+        <div id="donate_guide" class="donate_bar center hidden">
+            <!--
+            
+                <a href="http://o7keinrz4.bkt.clouddn.com/alipay.jpg" title="支付宝打赏" class="fancybox" rel="article0" 
+                    style="float:left;margin-left:25%;margin-right:10px;">
+                    <img src="http://o7keinrz4.bkt.clouddn.com/alipay.jpg" title="" height="164px" width="164px">
+                </a> 
+              
+
+            
+                <a href="http://o7keinrz4.bkt.clouddn.com/wechat.jpg" title="微信打赏" class="fancybox" rel="article0"
+                    style="margin-right:30%">
+                    <img src="http://o7keinrz4.bkt.clouddn.com/wechat.jpg" title="" height="164px" width="164px">
+                </a>
+            
+            -->
+            <table>
+                <tr>
+                    <td>
+                        
+                            <a href="http://o7keinrz4.bkt.clouddn.com/alipay.jpg" title="支付宝打赏" class="fancybox" rel="article0" 
+                                style="float:left;margin-left:25%;margin-right:10px;">
+                                <img src="http://o7keinrz4.bkt.clouddn.com/alipay.jpg" title="" height="164px" width="164px">
+                            </a> 
+                         
+                    </td>
+                    <td>
+                        
+                            <a href="http://o7keinrz4.bkt.clouddn.com/wechat.jpg" title="微信打赏" class="fancybox" rel="article0"
+                                style="margin-right:30%">
+                                <img src="http://o7keinrz4.bkt.clouddn.com/wechat.jpg" title="" height="164px" width="164px">
+                            </a>
+                        
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <script type="text/javascript">
+            document.getElementById('btn_donate').onclick = function() {
+                $('#donate_board').addClass('hidden');
+                // $('#donate_guide').removeClass('hidden');
+                $('#donate_guide').show(2000);
+            }
+
+        </script>
+    </div>
+
+    
+
+
+      
+    </div>
+
+    <div class="post-spread">
+      
+        <div class="bdsharebuttonbox">
+	<a href="#" class="bds_more" data-cmd="more"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+	<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+	<a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="韩渊媛" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">韩渊媛</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">Artikel</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">Kategorien</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">Tags</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        <div class="links-of-friendly motion-element">
+          
+        </div>
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#AngularJS-Debug"><span class="nav-number">1.</span> <span class="nav-text">AngularJS Debug</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#将-scope-模型对象挂载给-window"><span class="nav-number">1.1.</span> <span class="nav-text">将 $scope 模型对象挂载给 window</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Chrome-插件：AngularJS-Batarang"><span class="nav-number">1.2.</span> <span class="nav-text">Chrome 插件：AngularJS Batarang</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指令：Directive"><span class="nav-number">2.</span> <span class="nav-text">指令：Directive</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#指令的使用形式"><span class="nav-number">2.1.</span> <span class="nav-text">指令的使用形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内置指令"><span class="nav-number">2.2.</span> <span class="nav-text">内置指令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#控制器：Controller"><span class="nav-number">3.</span> <span class="nav-text">控制器：Controller</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义控制器的三种方式"><span class="nav-number">3.1.</span> <span class="nav-text">定义控制器的三种方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何划分控制器"><span class="nav-number">3.2.</span> <span class="nav-text">如何划分控制器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#视图模型（View-Model）-scope"><span class="nav-number">4.</span> <span class="nav-text">视图模型（View Model）: $scope</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#如何设计-scope"><span class="nav-number">4.1.</span> <span class="nav-text">如何设计 $scope</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ViewModel"><span class="nav-number">4.2.</span> <span class="nav-text">ViewModel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据模型作用域"><span class="nav-number">4.3.</span> <span class="nav-text">数据模型作用域</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模块：Module"><span class="nav-number">5.</span> <span class="nav-text">模块：Module</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义模块"><span class="nav-number">5.1.</span> <span class="nav-text">定义模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何划分模块"><span class="nav-number">5.2.</span> <span class="nav-text">如何划分模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加载多个模块"><span class="nav-number">5.3.</span> <span class="nav-text">加载多个模块</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#过滤器：Filter"><span class="nav-number">6.</span> <span class="nav-text">过滤器：Filter</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#内置过滤器"><span class="nav-number">6.1.</span> <span class="nav-text">内置过滤器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义过滤器"><span class="nav-number">6.2.</span> <span class="nav-text">自定义过滤器</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2017
+  </span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">韩渊媛
+  </span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme by <a class="theme-link" href="http://blog.idhyt.com">idhyt</a>.<a class="theme-link" href="https://github.com/idhyt/hexo-theme-next/tree/magiclamp">Mala</a>
+</div>
+
+<!-- busuanzi -->
+
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+    
+
+  
+
+
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>
